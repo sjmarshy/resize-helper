@@ -4,8 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/babel/bin/babel/index.js src --out-dir build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.5.8"
+  },
+  "dependencies": {
+    "baobab": "^1.1.1",
+    "underscore": "^1.8.3"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    }
+  }
 }
