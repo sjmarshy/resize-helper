@@ -1,7 +1,7 @@
 {
-  "name": "responsive-js-example",
+  "name": "resizeHelper",
   "version": "1.0.0",
-  "description": "",
+  "description": "provide to/from handlers for browser resizing",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/babel/bin/babel/index.js src --out-dir build"
@@ -11,6 +11,7 @@
   "devDependencies": {
     "babel": "^5.5.8"
   },
+  "main": "index.js",
   "dependencies": {
     "baobab": "^1.1.1",
     "underscore": "^1.8.3"
@@ -19,5 +20,6 @@
     "env": {
       "es6": true
     }
-  }
+  },
+  "private": true
 }
