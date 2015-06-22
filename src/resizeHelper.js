@@ -35,7 +35,7 @@ ResizeHelper.prototype.checkSizes = function () {
         return newSize < s;
     })[0];
 
-    if (newSize > sizes[sizes.length - 1]) {
+    if (newSize >= sizes[sizes.length - 1]) {
         size = sizes[sizes.length - 1];
     }
 
