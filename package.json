@@ -1,6 +1,6 @@
 {
   "name": "resize-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "provide to/from handlers for browser resizing",
   "main": "index.js",
   "scripts": {
