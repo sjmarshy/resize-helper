@@ -19,10 +19,9 @@ var ResizeHelper = (function (_EventEmitter) {
         this.sizes = sizes;
         this.cursor = bSizeCursor;
         this.currentSize = "";
-        this.t = {};
-        this.f = {};
 
         this.cursor.on("update", this.checkSizes.bind(this));
+        this.checkSizes();
     }
 
     _inherits(ResizeHelper, _EventEmitter);
@@ -35,11 +34,15 @@ var ResizeHelper = (function (_EventEmitter) {
             var sizes = Object.keys(this.sizes).map(function (e) {
                 return parseInt(e, 10);
             });
-            var size = sizes.filter(function (s) {
-                return newSize < s;
+            var size = sizes.filter(function (s, i, arr) {
+                return newSize >= s && newSize < arr[i + 1];
             })[0];
 
-            if (newSize >= sizes[sizes.length - 1]) {
+            if (newSize <= sizes[0]) {
+                size = sizes[0];
+            }
+
+            if (!size && newSize >= sizes[sizes.length - 1]) {
                 size = sizes[sizes.length - 1];
             }
 
