@@ -1,10 +1,11 @@
 {
   "name": "resize-helper",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "provide to/from handlers for browser resizing",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/babel/bin/babel/index.js src --out-dir build"
+    "build": "./node_modules/babel/bin/babel/index.js src --out-dir build",
+    "test": "mocha -R spec"
   },
   "author": "",
   "license": "ISC",
